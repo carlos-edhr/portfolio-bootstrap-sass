@@ -7,6 +7,11 @@
     <title>Learning bootstrap v5 with sass </title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/vendors/css/glightbox.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <!-- SECTION - NAVBAR -->
@@ -45,11 +50,12 @@
     
     <section id="home" class="intro-section">
       <div class="container">
-        <div class="row">
+        <div class="row align-items-center text-white">
+          <!-- Start the content for the intro -->
           <div class="col-md-6 intros">
             <h1 class="display-2">
               <span class="display-2--intro">Hey!, I'm Patrick</span>
-              <span class="display-2--description">
+              <span class="display-2--description lh-base">
                 This is a multi-purpose responsive layout created with bootstrap v5.
                 (here you can place your description text).
               </span>
@@ -61,12 +67,35 @@
               </span>
             </button>
           </div>
-          <div class="col-md-6 intros"></div>
+          <!-- Start the content for the video -->
+          <div class="col-md-6 intros text-end">
+            <div class="video-box">
+              <img src="images/arts/Coding _Monochromatic.png" alt="video illustration" class="img-fluid">
+              <a href="#" class="glightbox position-absolute top-50 start-50 translate-middle">
+               <span>
+                    <i class="fas fa-play-circle"></i>
+               </span>
+               <span class="border-animation border-animation--border-1"> </span>
+                <span class="border-animation border-animation--border-2"></span>
+              </a>
+            </div>
+          </div>
         </div>  
       </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,192L24,181.3C48,171,96,149,144,144C192,139,240,149,288,176C336,203,384,245,432,229.3C480,213,528,139,576,101.3C624,64,672,64,720,106.7C768,149,816,235,864,245.3C912,256,960,192,1008,160C1056,128,1104,128,1152,128C1200,128,1248,128,1296,149.3C1344,171,1392,213,1416,234.7L1440,256L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z" style="--darkreader-inline-fill: #007acc;" data-darkreader-inline-fill=""></path></svg>
+
     </section>
 
-
+      <script src="/assets/vendors/js/glightbox.min.js"></script>
+      <script type="text/javascript">
+        const lightbox = GLightbox({
+          'href': 'https://www.youtube.com/watch?v=J9lS14nM1xg',
+          'type': 'video',
+          'source': 'youtube', //vimeo, youtube or local
+          'width': 900,
+          'autoPlayVideos': 'true'
+});
+      </script>
       <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
